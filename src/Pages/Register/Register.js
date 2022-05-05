@@ -1,25 +1,70 @@
-import React from 'react';
+import React, { useState } from 'react';
+import { Button, Form } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
-import './Register.css'
+import auth from '../../firebaseInit';
+import SocialLogin from '../SocialLogin/SocialLogin';
+import { useCreateUserWithEmailAndPassword } from 'react-firebase-hooks/auth';
 
 
 const Register = () => {
-
+    const [
+        createUserWithEmailAndPassword,
+        user,
+        loading,
+        error,
+    ] = useCreateUserWithEmailAndPassword(auth);
+    const [name, setName] = useState('')
+    const [email, setEmail] = useState('')
+    const [password, setPassword] = useState('')
+    const [confirmPass, setConfirmPass] = useState('')
+    const handleNameBlur = e => {
+        setName(e.target.value)
+    }
+    const handleEmailBlur = e => {
+        setEmail(e.target.value);
+    }
+    const handlePasswordBlur = e => {
+        setPassword(e.target.value)
+    }
+    const handleConfirmPass = e => {
+        setConfirmPass(e.target.value)
+    }
+    const handleSubmit = event => {
+        event.preventDefault()
+        createUserWithEmailAndPassword(email, password)
+    }
 
     return (
-        <div>
-            <h1 className='my-5'>Please Register!</h1>
-            <form action="" className='d-flex flex-column w-50 mx-auto border-0'>
-                <div className='w-100'>
-                    <input className='w-50 border-0 rounded mb-3 p-3  register_input' type="text" name="name" id="" placeholder='First Name' required />
-                    <input className='w-50 border-0 rounded mb-3 p-3  register_input' type="text" name="name" id="" placeholder='last Name' required />
-                </div>
-                <input className='w-100 p-1 mb-3 border-0 rounded p-3 register_input' type="email" name="email" id="" placeholder='Your Email' required />
-                <input className='w-100 p-1 mb-3 border-0 rounded p-3 register_input' type="password" name="password" id="" placeholder='Password' required />
-                <input className='w-100 p-1 mb-3 border-0 rounded p-3 register_input' type="password" name="confirmPassword" id="" placeholder='Confirm Password' required />
-                <input className='w-100 fs-5 border-0 fw-bold login_Button py-2 ' type="submit" value='Register' />
-            </form>
-            <p className=' w-50 mx-auto text-start mt-2'>Already have an account? <span className='ms-3'><Link to='/login'>Please LogIn!</Link></span></p>
+        <div className='container mt-5 w-50 mx-auto'>
+            <h1>Please Register!</h1>
+            <Form onSubmit={handleSubmit} className='my-4'>
+                <Form.Group className="mb-3" controlId="formBasicEmail">
+                    <Form.Label>Your Name</Form.Label>
+                    <Form.Control onBlur={handleNameBlur} type="text" placeholder="Enter your Name" required />
+                </Form.Group>
+                <Form.Group className="mb-3" controlId="formBasicEmail">
+                    <Form.Label>Email address</Form.Label>
+                    <Form.Control onBlur={handleEmailBlur} type="email" placeholder="Enter email" required />
+                </Form.Group>
+                <Form.Group className="mb-3" controlId="formBasicPassword">
+                    <Form.Label>Password</Form.Label>
+                    <Form.Control onBlur={handlePasswordBlur} type="password" placeholder="Password" required />
+                </Form.Group>
+                <Form.Group className="mb-3" controlId="formBasicPassword">
+                    <Form.Label>Confirm Password</Form.Label>
+                    <Form.Control onBlur={handleConfirmPass} type="password" placeholder="Confirm Password" required />
+                </Form.Group>
+                <p className='mb-1'>Already have an account?
+                    <Link to='/login'>
+                        <span className='btn border-0 bg-none mb-1 text-danger'>Please LogIn!</span>
+                    </Link>
+                </p>
+                <Button className='btn btn-lg w-100' variant="dark" type="submit">
+                    Submit
+                </Button>
+
+                <SocialLogin></SocialLogin>
+            </Form>
         </div>
     );
 };

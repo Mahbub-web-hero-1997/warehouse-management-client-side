@@ -22,7 +22,7 @@ const Item = ({ item }) => {
                             </Card.Text>
                         </Card.Body>
 
-                        <Link to='/login'> <Button className='bg-dark w-100'>Update</Button></Link>
+                        <Link to='/login'> <Button className='bg-dark w-100'>Manage</Button></Link>
                     </Card>
                 </Col>
 
