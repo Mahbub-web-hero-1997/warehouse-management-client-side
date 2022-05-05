@@ -1,0 +1,6 @@
+.register_input {
+    /* border-radius: 20px; */
+    background: #ebeaea;
+    box-shadow: 16px 16px 32px #d4d3d3,
+        -16px -16px 32px #ffffff;
+}
