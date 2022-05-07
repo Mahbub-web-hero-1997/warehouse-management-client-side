@@ -26,7 +26,6 @@ const UpdateItem = (id) => {
                 console.log(response);
             })
     }
-
     const handleDeliveredButton = () => {
         const quantity = parseInt(service.quantity) - 1;
         axios.put(`https://arcane-spire-27010.herokuapp.com/items/${itemId}`, {

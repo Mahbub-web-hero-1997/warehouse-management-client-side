@@ -9,7 +9,6 @@ const Manage = ({ item, handleDeleteItem }) => {
 
     return (
 
-
         <div className="col-lg-6">
             <Row>
                 <Col>

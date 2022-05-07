@@ -4,6 +4,7 @@ import { Link, useLocation, useNavigate } from 'react-router-dom';
 import SocialLogin from '../SocialLogin/SocialLogin';
 import { useAuthState, useSignInWithEmailAndPassword } from 'react-firebase-hooks/auth';
 import auth from '../../firebaseInit';
+import { toast } from 'react-toastify';
 
 const Login = () => {
     const [
@@ -27,9 +28,11 @@ const Login = () => {
     const handleSubmit = event => {
         event.preventDefault()
         signInWithEmailAndPassword(email, password)
+
     }
     if (user1) {
         navigate(from, { replace: true })
+
     }
 
 

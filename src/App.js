@@ -9,6 +9,9 @@ import Login from './Pages/Login/Login';
 import Register from './Pages/Register/Register';
 import ManageItems from './Pages/ManageItems/ManageItems';
 import RequireAuth from './Pages/RequireAuth/RequireAuth';
+import AddItem from './Pages/AddItems/AddItem';
+import { ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 
 
@@ -17,6 +20,17 @@ import RequireAuth from './Pages/RequireAuth/RequireAuth';
 function App() {
   return (
     <div className="App">
+      <ToastContainer
+        position="top-right"
+        autoClose={5000}
+        hideProgressBar={false}
+        newestOnTop={false}
+        closeOnClick
+        rtl={false}
+        pauseOnFocusLoss
+        draggable
+        pauseOnHover
+      />
       <Header></Header>
       <Routes>
         <Route path='/' element={<Home></Home>}></Route>
@@ -29,7 +43,7 @@ function App() {
           </RequireAuth>
         }></Route>
         <Route path='/manage' element={<ManageItems></ManageItems>}></Route>
-
+        <Route path='/add' element={<AddItem></AddItem>}></Route>
       </Routes>
       <Footer></Footer>
     </div>

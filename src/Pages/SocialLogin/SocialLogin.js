@@ -4,6 +4,7 @@ import './SocialLogin.css'
 import { useSignInWithGoogle } from 'react-firebase-hooks/auth';
 import auth from '../../firebaseInit';
 import { useNavigate, useLocation } from 'react-router-dom';
+import { toast } from 'react-toastify';
 
 
 const SocialLogin = () => {
@@ -11,14 +12,18 @@ const SocialLogin = () => {
     const navigate = useNavigate()
     const googleSignIn = () => {
         signInWithGoogle()
+
     }
     const location = useLocation()
     const from = location?.state?.from?.pathname || "/";
     if (user) {
         navigate(from, { replace: true })
+        toast.success('Login Successful')
+
     }
     if (error) {
         console.error(error)
+        
     }
     return (
         <div className='mt-2'>
