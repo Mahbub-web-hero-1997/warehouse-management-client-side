@@ -40,9 +40,19 @@ const Header = () => {
                         <Navbar.Toggle aria-controls="responsive-navbar-nav" />
                         <Navbar.Collapse id="responsive-navbar-nav">
                             <Nav className="me-auto">
-                                <Nav.Link className='nav_Items py-0 me-2' href="/"> <FaHome className='mb-1 me-1'></FaHome> Home</Nav.Link>
-                                <Nav.Link className='nav_Items py-0 me-2' href="#service"><FaListAlt className='mb-1 me-1'></FaListAlt> Items</Nav.Link>
-                                <Nav.Link className='nav_Items py-0 me-2' href="#pricing"> <FaBlog className='mb-1 me-1'></FaBlog> Blogs</Nav.Link>
+                                {
+                                    user ? <>
+                                        <Nav.Link className='nav_Items py-0 me-2' href="/"> <FaHome className='mb-1 me-1'></FaHome> Home</Nav.Link>
+                                        <Nav.Link className='nav_Items py-0 me-2' href="#service"><FaListAlt className='mb-1 me-1'></FaListAlt> Items</Nav.Link>
+                                        <Nav.Link className='nav_Items py-0 me-2' as={Link} to="/manage"> Manage-Item</Nav.Link>
+                                        <Nav.Link className='nav_Items py-0 me-2' href="#service"> Add-Item</Nav.Link>
+                                        <Nav.Link className='nav_Items py-0 me-2' href="#service"> My-Item</Nav.Link>
+                                        <Nav.Link className='nav_Items py-0 me-2' href="#pricing"> <FaBlog className='mb-1 me-1'></FaBlog> Blogs</Nav.Link>
+                                    </> : <>
+                                        <Nav.Link className='nav_Items py-0 me-2' href="/"> <FaHome className='mb-1 me-1'></FaHome> Home</Nav.Link>
+                                        <Nav.Link className='nav_Items py-0 me-2' href="#pricing"> <FaBlog className='mb-1 me-1'></FaBlog> Blogs</Nav.Link>
+                                    </>
+                                }
                             </Nav>
                             <Nav>
                                 <Nav.Link className='fs-5 ' href="#deets">About</Nav.Link>

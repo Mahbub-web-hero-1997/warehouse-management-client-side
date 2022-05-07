@@ -50,7 +50,6 @@ const Login = () => {
                         <span className='btn border-0 bg-none mb-1 text-danger'>Please Register!</span>
                     </Link>
                 </p>
-                <Link className='text-decoration-none' to='/reset'><span className='d-block mb-2 btn w-25 border-0'>Reset-Password?</span></Link>
                 <Button className='btn btn-lg w-100' variant="dark" type="submit">
                     Submit
                 </Button>

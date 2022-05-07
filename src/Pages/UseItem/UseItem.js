@@ -4,11 +4,11 @@ const useItems = () => {
 
     const [items, setItems] = useState([]);
     useEffect(() => {
-        fetch('data.json')
+        fetch(`https://arcane-spire-27010.herokuapp.com/items`)
             .then(res => res.json())
             .then(data => setItems(data))
     }, [])
-    return [items]
+    return [items, setItems]
 }
 
 export default useItems;

@@ -1,10 +1,16 @@
 import React from 'react';
 import { Button, Card, Col, Row } from 'react-bootstrap';
-import { Link } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
+
 
 const Item = ({ item }) => {
-    const { name, img, price, quantity, supplier, comment } = item;
 
+    const { name, img, price, quantity, supplier, comment, _id } = item;
+    const navigate = useNavigate()
+    const navigateToItemDetail = id => {
+        navigate(`/item/${_id}`)
+
+    }
     return (
 
         <div className="col-lg-4">
@@ -22,7 +28,7 @@ const Item = ({ item }) => {
                             </Card.Text>
                         </Card.Body>
 
-                        <Link to='/login'> <Button className='bg-dark w-100'>Manage</Button></Link>
+                        <Button onClick={() => navigateToItemDetail(_id)} className='bg-dark w-100'>Manage</Button>
                     </Card>
                 </Col>
 
