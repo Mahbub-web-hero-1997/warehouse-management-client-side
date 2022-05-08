@@ -16,10 +16,10 @@ const UsersItem = ({ item }) => {
             </thead> */}
                 <tbody>
                     <tr>
-                        <td colSpan={1}> <b>Product Name :</b> {item.product}</td>
-                        <td colSpan={1}><b>Supplier Name :</b> {item.supplier}</td>
-                        <td colSpan={1}> <b>Price :</b> ${item.price}</td>
-                        <td colSpan={1}><b>Quantity : </b>{item.quantity}</td>
+                        <td colSpan={1}> <b>Product Name :</b> {item?.product}</td>
+                        <td colSpan={1}><b>Supplier Name :</b> {item?.supplier}</td>
+                        <td colSpan={1}> <b>Price :</b> ${item?.price}</td>
+                        <td colSpan={1}><b>Quantity : </b>{item?.quantity}</td>
                     </tr>
                 </tbody>
             </Table>
