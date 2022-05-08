@@ -19,7 +19,6 @@ const MyItem = () => {
 
         // product, supplier, price, quantity, comment, img, _id
         <div>
-            <h1>this is my item</h1>
             {
                 myItem.map(item => <div className='container'>
                     <Table striped bordered hover>
