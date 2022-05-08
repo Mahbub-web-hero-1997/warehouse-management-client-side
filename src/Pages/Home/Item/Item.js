@@ -1,15 +1,12 @@
 import React from 'react';
 import { Button, Card, Col, Row } from 'react-bootstrap';
 import { useNavigate } from 'react-router-dom';
-
-
 const Item = ({ item }) => {
     console.log('item', item);
     const { name, image, price, quantity, supplier, comment, _id } = item;
     const navigate = useNavigate()
     const navigateToItemDetail = id => {
         navigate(`/item/${_id}`)
-
     }
     return (
 
