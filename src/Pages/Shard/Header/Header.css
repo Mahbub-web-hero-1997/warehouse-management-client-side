@@ -100,3 +100,10 @@
 .nav_Items:hover::before {
     width: 62%;
 }
+
+@media (max-width:380px) {
+
+    .navigation_Container {
+        display: none;
+    }
+}

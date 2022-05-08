@@ -16,11 +16,11 @@ const Header = () => {
     }
     return (
         <>
-            <div className='navigation_Container d-flex align-items-center  '>
-                <div className='container d-flex align-items-center justify-content-between '>
+            <div className='navigation_Container pt-3 align-items-center d-none d-sm-block d-lg-block'>
+                <div className=' navItem_Container container d-flex  align-items-center justify-content-between '>
                     <div className="w-50 d-flex m-0 p-0 justify-content-between">
-                        <p className='mb-0'> <FaPhone className='me-1 fs-5' /> +8801644196242</p>
-                        <p className='mb-0'> <FaEnvelope className='me-1 fs-5' /> mahbub.programing.hero@gmail.com</p>
+                        <p className='mb-0'> <FaPhone className='me-1 ' /> +8801644196242</p>
+                        <p className='mb-0'> <FaEnvelope className='me-1 ' /> mahbub.programing.hero@gmail.com</p>
                     </div>
                     <div className='pe-2'>
                         <Link className='social_Icon' to='#'><FaFacebook className='fs-4 ms-4 icon  ' /></Link>

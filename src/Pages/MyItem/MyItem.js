@@ -16,24 +16,28 @@ const MyItem = () => {
     console.log('MyItem', myItem);
 
     return (
+
+        // product, supplier, price, quantity, comment, img, _id
         <div>
             <h1>this is my item</h1>
             {
-                myItem.map(item => <div>
+                myItem.map(item => <div className='container'>
                     <Table striped bordered hover>
-                        <thead>
+                        {/* <thead>
                             <tr>
                                 <th>#</th>
-                                <th>First Name</th>
-                                <th>Last Name</th>
-                                <th>Username</th>
+                                <th>Product Name</th>
+                                <th>Supplier Name</th>
+                                <th>Price</th>
+                                <th>Quantity</th>
                             </tr>
-                        </thead>
-                        <tbody>                            
+                        </thead> */}
+                        <tbody>
                             <tr>
-                                <td>3</td>
-                                <td colSpan={2}>Larry the Bird</td>
-                                <td>@twitter</td>
+                                <td colSpan={1}> <b>Product Name :</b> {item.product}</td>
+                                <td colSpan={1}><b>Supplier Name :</b> {item.supplier}</td>
+                                <td colSpan={1}> <b>Price :</b> ${item.price}</td>
+                                <td colSpan={1}><b>Quantity : </b>{item.quantity}</td>
                             </tr>
                         </tbody>
                     </Table>

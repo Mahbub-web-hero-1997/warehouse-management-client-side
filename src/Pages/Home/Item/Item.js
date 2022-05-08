@@ -4,6 +4,7 @@ import { useNavigate } from 'react-router-dom';
 const Item = ({ item }) => {
     console.log('item', item);
     const { product, supplier, price, quantity, comment, img, _id } = item;
+    console.log(product);
     const navigate = useNavigate()
     const navigateToItemDetail = id => {
         navigate(`/item/${_id}`)
