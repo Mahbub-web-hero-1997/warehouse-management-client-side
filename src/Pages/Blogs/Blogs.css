@@ -1,0 +1,9 @@
+.blogs_Container {
+    height: 500px;
+}
+
+@media (max-width:700px) {
+    .blogs_Container {
+        height: auto;
+    }
+}

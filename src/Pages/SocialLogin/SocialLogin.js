@@ -18,12 +18,10 @@ const SocialLogin = () => {
     const from = location?.state?.from?.pathname || "/";
     if (user) {
         navigate(from, { replace: true })
-        toast.success('Login Successful')
-
     }
     if (error) {
         console.error(error)
-        
+
     }
     return (
         <div className='mt-2'>

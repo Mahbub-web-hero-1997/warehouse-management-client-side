@@ -8,14 +8,14 @@ const ManageItems = ({ item }) => {
     const handleDeleteItem = id => {
         const proceed = window.confirm('Are you sure you want to delete?')
         if (proceed) {
-            axios.delete(`http://localhost:5000/items/${id}`)
+            axios.delete(`https://arcane-spire-27010.herokuapp.com/items/${id}`)
                 .then(res => {
                     if (res.data.deletedCount > 0) {
                         const remaining = items.filter(item => item._id !== id)
                         setItems(remaining)
                     }
                 })
-            console.log(id);
+
         }
 
     }

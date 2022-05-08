@@ -36,18 +36,18 @@ const Header = () => {
             <div className='sticky-top navBar_Container '>
                 <Navbar collapseOnSelect expand="lg" variant='dark' >
                     <Container>
-                        <Navbar.Brand href="#home"><h3 className='navbar_Title'>All-In-One</h3></Navbar.Brand>
+                        <Navbar.Brand as={Link} to="/home"><h3 className='navbar_Title'>All-In-One</h3></Navbar.Brand>
                         <Navbar.Toggle aria-controls="responsive-navbar-nav" />
                         <Navbar.Collapse id="responsive-navbar-nav">
                             <Nav className="me-auto">
                                 {
                                     user ? <>
                                         <Nav.Link className='nav_Items py-0 me-2' href="/"> <FaHome className='mb-1 me-1'></FaHome> Home</Nav.Link>
-                                        <Nav.Link className='nav_Items py-0 me-2' href="#service"><FaListAlt className='mb-1 me-1'></FaListAlt> Items</Nav.Link>
+                                        <Nav.Link className='nav_Items py-0 me-2' as={Link} to="/item"><FaListAlt className='mb-1 me-1'></FaListAlt> Items</Nav.Link>
                                         <Nav.Link className='nav_Items py-0 me-2' as={Link} to="/manage"> Manage-Item</Nav.Link>
                                         <Nav.Link className='nav_Items py-0 me-2' as={Link} to="/add"> Add-Item</Nav.Link>
                                         <Nav.Link className='nav_Items py-0 me-2' href="#service"> My-Item</Nav.Link>
-                                        <Nav.Link className='nav_Items py-0 me-2' href="#pricing"> <FaBlog className='mb-1 me-1'></FaBlog> Blogs</Nav.Link>
+                                        <Nav.Link className='nav_Items py-0 me-2' as={Link} to="/blogs"> <FaBlog className='mb-1 me-1'></FaBlog> Blogs</Nav.Link>
                                     </> : <>
                                         <Nav.Link className='nav_Items py-0 me-2' href="/"> <FaHome className='mb-1 me-1'></FaHome> Home</Nav.Link>
                                         <Nav.Link className='nav_Items py-0 me-2' href="#pricing"> <FaBlog className='mb-1 me-1'></FaBlog> Blogs</Nav.Link>
