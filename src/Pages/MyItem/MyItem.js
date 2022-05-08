@@ -3,6 +3,7 @@ import auth from '../../firebaseInit';
 import useItems from '../UseItem/UseItem';
 import { useAuthState } from 'react-firebase-hooks/auth';
 import { Table } from 'react-bootstrap';
+import UsersItem from './UsersItem';
 
 
 const MyItem = () => {
@@ -20,27 +21,10 @@ const MyItem = () => {
         // product, supplier, price, quantity, comment, img, _id
         <div>
             {
-                myItem.map(item => <div className='container'>
-                    <Table striped bordered hover>
-                        {/* <thead>
-                            <tr>
-                                <th>#</th>
-                                <th>Product Name</th>
-                                <th>Supplier Name</th>
-                                <th>Price</th>
-                                <th>Quantity</th>
-                            </tr>
-                        </thead> */}
-                        <tbody>
-                            <tr>
-                                <td colSpan={1}> <b>Product Name :</b> {item.product}</td>
-                                <td colSpan={1}><b>Supplier Name :</b> {item.supplier}</td>
-                                <td colSpan={1}> <b>Price :</b> ${item.price}</td>
-                                <td colSpan={1}><b>Quantity : </b>{item.quantity}</td>
-                            </tr>
-                        </tbody>
-                    </Table>
-                </div>)
+                myItem.map(item => <UsersItem
+                    key={item._id}
+                    item={item}
+                ></UsersItem>)
             }
         </div>
     );
