@@ -15,9 +15,7 @@ const ManageItems = ({ item }) => {
                         setItems(remaining)
                     }
                 })
-
         }
-
     }
     return (
         <div className='row gy-4 '>

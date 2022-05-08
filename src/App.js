@@ -15,6 +15,7 @@ import 'react-toastify/dist/ReactToastify.css';
 import Item from './Pages/Home/Item/Item';
 import Items from './Pages/Home/Items/Items';
 import Blogs from './Pages/Blogs/Blogs';
+import ResetPassword from './Pages/Shard/ResetPassword';
 
 
 
@@ -49,6 +50,7 @@ function App() {
         <Route path='/manage' element={<ManageItems></ManageItems>}></Route>
         <Route path='/add' element={<AddItem></AddItem>}></Route>
         <Route path='/blogs' element={<Blogs></Blogs>}></Route>
+        <Route path='/reset' element={<ResetPassword></ResetPassword>}></Route>
       </Routes>
       <Footer></Footer>
     </div>
