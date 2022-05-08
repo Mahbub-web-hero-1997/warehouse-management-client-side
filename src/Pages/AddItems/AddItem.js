@@ -13,7 +13,8 @@ const AddItem = () => {
         const quantity = event.target.quantity.value;
         const comment = event.target.comment.value;
         const img = event.target.image.value;
-        const item = { product, supplier, price, quantity, comment, img }
+        const email = event.target.email.value;
+        const item = { product, supplier, price, quantity, comment, img, email }
         fetch('https://arcane-spire-27010.herokuapp.com/items', {
             method: 'POST',
             headers: {
@@ -43,7 +44,7 @@ const AddItem = () => {
                     <input className='p-1 me-1 w-100' required type="text" name='product' placeholder='Product Name' />
                     <input className='p-1 ms-1 w-100' required type="text" name='supplier' placeholder='Supplier Name' />
                 </div>
-                <input className='p-1 my-1 w-100' required type="email" name='email' placeholder={user?.email} disabled />
+                <input className='p-1 my-1 w-100' required type="email" name='email' value={user?.email} disabled />
                 <input className='p-1 my-1 w-100' required type="number" name='price' placeholder='Price' />
                 <input className='p-1 my-1 w-100' required type="number" name='quantity' placeholder='Quantity' />
                 <input className='p-1 my-1 w-100' required type="text" name='comment' placeholder='comment' />

@@ -46,7 +46,7 @@ const Header = () => {
                                         <Nav.Link className='nav_Items py-0 me-2' as={Link} to="/item"><FaListAlt className='mb-1 me-1'></FaListAlt> Items</Nav.Link>
                                         <Nav.Link className='nav_Items py-0 me-2' as={Link} to="/manage"> Manage-Item</Nav.Link>
                                         <Nav.Link className='nav_Items py-0 me-2' as={Link} to="/add"> Add-Item</Nav.Link>
-                                        <Nav.Link className='nav_Items py-0 me-2' href="#service"> My-Item</Nav.Link>
+                                        <Nav.Link className='nav_Items py-0 me-2' as={Link} to="/myItem"> My-Item</Nav.Link>
                                         <Nav.Link className='nav_Items py-0 me-2' as={Link} to="/blogs"> <FaBlog className='mb-1 me-1'></FaBlog> Blogs</Nav.Link>
                                     </> : <>
                                         <Nav.Link className='nav_Items py-0 me-2' href="/"> <FaHome className='mb-1 me-1'></FaHome> Home</Nav.Link>
