@@ -3,6 +3,7 @@ import Item from '../Item/Item';
 
 const Items = () => {
     const [items] = useItems()
+    console.log(items);
     return (
         <div className='container'>
             <h1 className='fs-1 fw-bold mt-5 mb-4'>Available Items</h1>

@@ -32,9 +32,11 @@ const ResetPassword = () => {
                 <div className='w-100 mb-4'>
                     <input className='px-4 py-2 w-75 '
                         type="email"
+                        required
                         placeholder='Enter Current Email'
                         value={email}
                         onChange={(e) => setEmail(e.target.value)}
+
                     />
                 </div>
                 <button onClick={() => resetPass()} className='btn btn-lg btn-dark ms-2 text-start'>

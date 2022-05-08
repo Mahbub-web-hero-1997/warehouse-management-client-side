@@ -16,6 +16,7 @@ import Item from './Pages/Home/Item/Item';
 import Items from './Pages/Home/Items/Items';
 import Blogs from './Pages/Blogs/Blogs';
 import ResetPassword from './Pages/Shard/ResetPassword';
+import AboutMe from './Pages/AboutMe/AboutMe';
 
 
 
@@ -51,6 +52,7 @@ function App() {
         <Route path='/add' element={<AddItem></AddItem>}></Route>
         <Route path='/blogs' element={<Blogs></Blogs>}></Route>
         <Route path='/reset' element={<ResetPassword></ResetPassword>}></Route>
+        <Route path='/about' element={<AboutMe></AboutMe>}></Route>
       </Routes>
       <Footer></Footer>
     </div>

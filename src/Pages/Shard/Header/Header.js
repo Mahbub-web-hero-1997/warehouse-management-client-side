@@ -50,12 +50,12 @@ const Header = () => {
                                         <Nav.Link className='nav_Items py-0 me-2' as={Link} to="/blogs"> <FaBlog className='mb-1 me-1'></FaBlog> Blogs</Nav.Link>
                                     </> : <>
                                         <Nav.Link className='nav_Items py-0 me-2' href="/"> <FaHome className='mb-1 me-1'></FaHome> Home</Nav.Link>
-                                        <Nav.Link className='nav_Items py-0 me-2' href="#pricing"> <FaBlog className='mb-1 me-1'></FaBlog> Blogs</Nav.Link>
+                                        <Nav.Link className='nav_Items py-0 me-2' as={Link} to="/blogs"> <FaBlog className='mb-1 me-1'></FaBlog> Blogs</Nav.Link>
                                     </>
                                 }
                             </Nav>
                             <Nav>
-                                <Nav.Link className='fs-5 ' href="#deets">About</Nav.Link>
+                                <Nav.Link className='fs-5 ' as={Link} to="/about">About</Nav.Link>
                                 {
                                     user ? <Nav.Link onClick={handleSignOut} className='fs-5' eventKey={2} href="#memes"> <FaArrowAltCircleRight className='mb-1 me-1'></FaArrowAltCircleRight>
                                         LogOut

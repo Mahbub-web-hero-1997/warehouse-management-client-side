@@ -5,7 +5,7 @@ import './Blogs.css'
 const Blogs = () => {
     return (
         <div className='w-75 mx-auto my-5 blogs_Container'>
-            <Accordion className='mb-5'>
+            <Accordion className='mb-5 py-5'>
                 <Accordion.Item eventKey="0">
                     <Accordion.Header>Difference between Node.JS and Javascript</Accordion.Header>
                     <Accordion.Body>
