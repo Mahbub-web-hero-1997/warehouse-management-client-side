@@ -3,7 +3,9 @@ import { Table } from 'react-bootstrap';
 
 const UsersItem = ({ item }) => {
     return (
-        <div className='container'>
+        <div className='container mt-5'>
+            <h2 className='mt-4'>My Items</h2>
+            <hr className='w-25 mx-auto' />
             <Table striped bordered hover>
                 {/* <thead>
                 <tr>
